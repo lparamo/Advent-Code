@@ -1,20 +1,20 @@
-with open("inputDay1.txt", "r", encoding="utf-8") as infile:
-    data = infile.read().splitlines()
+with open("inputDay1.txt", "r", encoding="utf-8") as input:
+    data = input.read().splitlines()
 
-calories_per_elf: list[int] = []
-current_calories = 0
+calorias_elfo: list[int] = []
+sum1 = 0
 
 for value in data:
     if value:
-        current_calories += int(value)
+        sum1 += int(value)
     else:
-        calories_per_elf.append(current_calories)
-        current_calories = 0
+        calorias_elfo.append(sum1)
+        sum1 = 0
 
 
 # part 1
-print(max(calories_per_elf))
+print(max(calorias_elfo))
 
 # part 2
-calories_per_elf.sort(reverse=True)
-print(sum(calories_per_elf[:3]))
+calorias_elfo.sort(reverse=True)
+print(sum(calorias_elfo[:3]))

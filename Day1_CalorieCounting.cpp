@@ -1,7 +1,7 @@
 //entrada (calorias por elfo)
 /*Los elfos se turnan para anotar el número de calorías que contienen las distintas comidas, tentempiés, raciones, etc. que han traído, un artículo por línea.
 Cada elfo separa su propio inventario del inventario del elfo anterior (si lo hay) mediante una línea en blanco.*/
-//les gustaría saber cuántas calorías lleva el elfo que más calorías lleva
+//Les gustaría saber cuántas calorías lleva el elfo que más calorías lleva y la suma de los tres elfos que más calorías llevan
 #include <iostream>
 #include <fstream>
 #include <string>

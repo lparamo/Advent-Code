@@ -1,23 +1,17 @@
+import re
 with open('inputDay4.txt') as file:
     input = file.read().splitlines()
 
-def part1(input):
-    ans = 0
+    cont1 = 0
+    cont2 = 0
     for line in input:
-        points = re.split(',|-', line)
-        s1, e1, s2, e2 = [int(x) for x in points]
-        if s1 <= s2 and e2 <= e1 or s2 <= s1 and e1 <= e2:
-            ans += 1
-    return ans
+        val = re.split(',|-', line)
+        x1, y1, x2, y2 = [int(x) for x in val]
+        if x1 <= x2 and y2 <= y1 or x2 <= x1 and y1 <= y2:
+            cont1 += 1
 
-def part2(input):
-    ans = 0
-    for line in input:
-        points = re.split(',|-', line)
-        s1, e1, s2, e2 = [int(x) for x in points]
-        if s2 <= e1 and s1 <= e2:
-            ans += 1
-    return ans
+        if x2 <= y1 and x1 <= y2:
+            cont2 += 1
 
-print(part1(input))
-print(part2(input))
+print(cont1)
+print(cont2)
